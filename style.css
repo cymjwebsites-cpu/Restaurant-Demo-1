@@ -1,17 +1,37 @@
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background: #f4f4f4;
   margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
 }
 
-h1 {
+.hero {
   background: #222;
   color: white;
-  padding: 20px;
-  margin: 0;
+  text-align: center;
+  padding: 60px 20px;
 }
 
-p {
-  font-size: 18px;
+.hero button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.menu {
+  padding: 30px;
+  text-align: center;
+}
+
+.item {
+  background: white;
+  margin: 15px auto;
+  padding: 15px;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.contact {
+  text-align: center;
+  padding: 30px;
 }
