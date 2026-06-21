@@ -9,25 +9,33 @@
   <header class="hero">
     <h1>Sunny's Grill</h1>
     <p>Fresh burgers • Hot fries • Cold shakes</p>
-    <button>Order Now</button>
   </header>
 
   <section class="menu">
-    <h2>Menu</h2>
+    <h2>Menu (click items)</h2>
 
     <div class="item">
-      <h3>Cheeseburger</h3>
-      <p>$8 - Juicy beef, melted cheese</p>
+      <button class="toggle">Cheeseburger</button>
+      <div class="content">
+        <p>$8</p>
+        <p>Juicy beef patty, cheddar cheese, lettuce, tomato, house sauce.</p>
+      </div>
     </div>
 
     <div class="item">
-      <h3>Fries</h3>
-      <p>$3 - Crispy golden fries</p>
+      <button class="toggle">Fries</button>
+      <div class="content">
+        <p>$3</p>
+        <p>Golden crispy fries cooked fresh and lightly salted.</p>
+      </div>
     </div>
 
     <div class="item">
-      <h3>Milkshake</h3>
-      <p>$5 - Vanilla, chocolate, strawberry</p>
+      <button class="toggle">Milkshake</button>
+      <div class="content">
+        <p>$5</p>
+        <p>Thick milkshake available in vanilla, chocolate, and strawberry.</p>
+      </div>
     </div>
 
   </section>
@@ -37,6 +45,17 @@
     <p>123 Main Street</p>
     <p>(555) 123-4567</p>
   </section>
+
+  <script>
+    const buttons = document.querySelectorAll(".toggle");
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        content.classList.toggle("show");
+      });
+    });
+  </script>
 
 </body>
 </html>
