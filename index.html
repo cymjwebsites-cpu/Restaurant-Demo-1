@@ -3,59 +3,58 @@
 <head>
   <title>Sunny's Grill</title>
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
   <header class="hero">
     <h1>Sunny's Grill</h1>
     <p>Fresh burgers • Hot fries • Cold shakes</p>
+    <a href="#menu" class="btn">View Menu</a>
   </header>
 
-  <section class="menu">
-    <h2>Menu (click items)</h2>
+  <section id="menu" class="menu">
+    <h2>Our Menu</h2>
 
-    <div class="item">
-      <button class="toggle">Cheeseburger</button>
-      <div class="content">
-        <p>$8</p>
-        <p>Juicy beef patty, cheddar cheese, lettuce, tomato, house sauce.</p>
+    <div class="grid">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd" />
+        <h3>Cheeseburger</h3>
+        <p>Juicy beef, cheddar cheese, fresh veggies</p>
+        <span>$8</span>
       </div>
-    </div>
 
-    <div class="item">
-      <button class="toggle">Fries</button>
-      <div class="content">
-        <p>$3</p>
-        <p>Golden crispy fries cooked fresh and lightly salted.</p>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" />
+        <h3>Fries</h3>
+        <p>Crispy golden fries cooked fresh daily</p>
+        <span>$3</span>
       </div>
-    </div>
 
-    <div class="item">
-      <button class="toggle">Milkshake</button>
-      <div class="content">
-        <p>$5</p>
-        <p>Thick milkshake available in vanilla, chocolate, and strawberry.</p>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699" />
+        <h3>Milkshake</h3>
+        <p>Thick, creamy shakes in multiple flavors</p>
+        <span>$5</span>
       </div>
-    </div>
 
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>About Us</h2>
+    <p>
+      Sunny's Grill is a local burger spot serving fresh, fast, and affordable food made to order.
+    </p>
   </section>
 
   <section class="contact">
     <h2>Contact</h2>
     <p>123 Main Street</p>
     <p>(555) 123-4567</p>
+    <a class="btn" href="mailto:example@email.com">Email Us</a>
   </section>
-
-  <script>
-    const buttons = document.querySelectorAll(".toggle");
-
-    buttons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        const content = btn.nextElementSibling;
-        content.classList.toggle("show");
-      });
-    });
-  </script>
 
 </body>
 </html>
